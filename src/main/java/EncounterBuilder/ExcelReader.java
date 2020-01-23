@@ -24,6 +24,8 @@ public class ExcelReader {
 	//Array List to hold all sheets
 	public static ArrayList<Sheet> sheetList = new ArrayList<>();
 	
+	
+	
 	/**
 	 * The 'Entry Point' to reading an excel sheet.
 	 * Right now it reads whatever is in the final XLSX_FILEPATH.
@@ -62,27 +64,29 @@ public class ExcelReader {
 		//Data Formatter for Reading Excel contents
 		DataFormatter dataFormatter = new DataFormatter();
 		
+		//Row Iterator for reading individual Sheets
 		Iterator<Row> rowIterator =  sheetList.get(0).rowIterator();
+		rowIterator.next();
+		
+		//Iterate through all the rows.
 		while(rowIterator.hasNext()) {
+			//Get the next iterator
 			Row row = rowIterator.next();
-			
+			//Create a cell iterator
 			Iterator<Cell> cellIterator = row.cellIterator();
 			
-			String[] data = new String[5];
-			int i = 0;
-			
-			while(cellIterator.hasNext()) {
+				//Get first cell.
 				Cell cell = cellIterator.next();
-				System.out.print(dataFormatter.formatCellValue(cell));
-			}
-			
-			
-			
-			
-			
+				
+				//Add the name of an entry to the name list
+				MonsterList.populateNameList(dataFormatter.formatCellValue(cell));
+				
+				//Add the CR of the enemy to the CR list
+				cell = cellIterator.next();
+				MonsterList.populateCRList(dataFormatter.formatCellValue(cell));
 		}
-		
-		
-		
+		//Print out the collected Data
+		MonsterList.printLists();
 	}
+	
 }
