@@ -1,44 +1,21 @@
 package monster;
 
 public class Skillset {
-	//DEX
-	public static final int ACROBATICS 			= 0;
-	//WIS
-	public static final int ANIMAL_HANDLING		= 1;
-	//INT
-	public static final int ARCANA 				= 2;
-	//STR
-	public static final int ATHLETICS 			= 3;
-	//CHA
-	public static final int DECEPTION 			= 4;
-	//INT
-	public static final int HISTORY 			= 5;
-	//WIS
-	public static final int INSIGHT 			= 6;
-	//CHA
-	public static final int INTIMIDATION 		= 7;
-	//INT
-	public static final int INVESTIGATION		= 8;
-	//WIS
-	public static final int MEDICINE			= 9;
-	//INT
-	public static final int NATURE				= 10;
-	//WIS
-	public static final int PERCEPTION			= 11;
-	//CHA
-	public static final int PERFORMANCE			= 12;
-	//CHA
-	public static final int PERSUASION			= 13;
-	//WIS
-	public static final int RELIGION			= 14;
-	//DEX
-	public static final int SLEIGHT_OF_HAND		= 15;
-	//DEX
-	public static final int STEALTH				= 16;
-	//WIS
-	public static final int SURVIVAL			= 17;
 	
+	private static final int[] STR_SKILLS = new int[] {Skill.ATHLETICS};
+	private static final int[] DEX_SKILLS = new int[] {Skill.ACROBATICS, Skill.SLEIGHT_OF_HAND, Skill.STEALTH};
+	private static final int[] CON_SKILLS = new int[] {};
+	private static final int[] INT_SKILLS = new int[] {Skill.ARCANA, Skill.HISTORY, Skill.INVESTIGATION, Skill.NATURE};
+	private static final int[] WIS_SKILLS = new int[] {Skill.ANIMAL_HANDLING, Skill.INSIGHT, Skill.MEDICINE, Skill.PERCEPTION, Skill.RELIGION, Skill.SURVIVAL};
+	private static final int[] CHA_SKILLS = new int[] {Skill.DECEPTION, Skill.INTIMIDATION, Skill.PERFORMANCE, Skill.PERSUASION};
 	
+	private Skill[] skills;
+	
+	public Skillset(Stat[] pStats, int[] proList, int proBonus) {
+		for(int s: STR_SKILLS) {
+			skills[s] = new Skill(s,pStats[0],proList,proBonus);
+		}
+	}
 	
 	
 }

@@ -10,6 +10,11 @@ public class Stat {
 	//Int for stat
 	private final int stat;
 	
+	public Stat() {
+		stat = 777;
+	}
+	
+	
 	/**
 	 * Constructor for Stats
 	 * @param pStat
@@ -32,6 +37,14 @@ public class Stat {
 	 */
 	public int getModifier() {
 		return (stat-10)/2;
+	}
+	
+	/**
+	 * Returns the passive for a stat
+	 * @return passive
+	 */
+	public int getPassive() {
+		return 10 + getModifier();
 	}
 }
 

@@ -2,12 +2,19 @@ package monster;
 
 public class Monster {
 	
-	private static String name;
-	private static Statblock stats;
-	private static Skillset skills;
+	private  final String name;
+	private  final Statblock stats;
+	private  final Skillset skills;
+	private final int[] skillPros;
+	private final int[] savePros;
 	
-	public Monster() {
-		
+	
+	public Monster(String pName, Statblock pStats, Skillset pSkills, int[] pSkillPros, int[] pSavePros) {
+		name = pName;
+		stats = pStats;
+		skills = pSkills;
+		skillPros = pSkillPros;
+		savePros = pSavePros;
 	}
 	
 	@Override
