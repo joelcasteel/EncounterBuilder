@@ -1,4 +1,4 @@
-package EncounterBuilder;
+package monster;
 
 public class SkillSet {
 	//DEX

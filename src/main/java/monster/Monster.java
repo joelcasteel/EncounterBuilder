@@ -1,4 +1,4 @@
-package EncounterBuilder;
+package monster;
 
 public class Monster {
 	private final String name;

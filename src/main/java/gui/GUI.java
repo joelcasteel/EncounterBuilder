@@ -1,4 +1,4 @@
-package EncounterBuilder;
+package gui;
 
 import java.io.IOException;
 
@@ -12,6 +12,8 @@ import javafx.scene.text.Text;
 import javafx.scene.layout.Pane;
 import javafx.geometry.Insets;
 
+import core.*;
+import monster.*;
 
 public class GUI extends Application {
 

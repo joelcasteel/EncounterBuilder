@@ -1,4 +1,4 @@
-package EncounterBuilder;
+package monster;
 
 import java.util.ArrayList;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -7,7 +7,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 
-
+/**
+ * Basic List for Holding Monster DataTypes
+ * @author joel
+ *
+ */
 public class MonsterList {
 	private static ArrayList<String> nameList = new ArrayList<>();
 	private static ArrayList<Integer> CRList = new ArrayList<>();

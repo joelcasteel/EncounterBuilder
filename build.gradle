@@ -32,4 +32,4 @@ dependencies {
 }
 
 apply plugin: 'application'
-    mainClassName = 'EncounterBuilder.GUI'
+    mainClassName = 'gui.GUI'

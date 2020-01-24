@@ -1,4 +1,4 @@
-package EncounterBuilder;
+package monster;
 
 /**
  * Stat Wrapper Class for various monsters
