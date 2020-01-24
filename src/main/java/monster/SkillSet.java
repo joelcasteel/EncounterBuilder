@@ -1,6 +1,6 @@
 package monster;
 
-public class SkillSet {
+public class Skillset {
 	//DEX
 	public static final int ACROBATICS 			= 0;
 	//WIS

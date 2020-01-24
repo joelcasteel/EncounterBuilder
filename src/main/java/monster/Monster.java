@@ -1,23 +1,18 @@
 package monster;
 
 public class Monster {
-	private final String name;
-	private final int CR;
-	private final int HP;
-	private final int AC;
-	private final int INIT;
 	
-	public Monster(String pName, int[] pStats) {
-		name = pName;
-		CR = pStats[0];
-		HP = pStats[1];
-		AC = pStats[2];
-		INIT = pStats[3];
+	private static String name;
+	private static Statblock stats;
+	private static Skillset skills;
+	
+	public Monster() {
+		
 	}
 	
 	@Override
 	public String toString() {
-		return name + "/n"+"ChallengeRating: " + CR;
+		return "Updog";
 	}
 	
 	
